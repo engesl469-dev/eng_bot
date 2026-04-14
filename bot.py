@@ -17,7 +17,8 @@ client = gspread.authorize(creds)
 sheet = client.open("Consultations_Bot").sheet1
 
 # ---------------- TELEGRAM ----------------
-TOKEN = "8685164523:AAEelgVcuVR7k5lUY--2jIyVOQuXE37vGs0"
+import os
+TOKEN = os.getenv("BOT_TOKEN")
 
 logging.basicConfig(level=logging.INFO)
 
